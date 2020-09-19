@@ -1,0 +1,12 @@
+<Sysmon schemaversion="4.40">
+  <!-- Capture all hashes -->
+  <HashAlgorithms>*</HashAlgorithms>
+  <CheckRevocation />
+  <CaptureClipboard />
+  <EventFiltering>
+      <RuleGroup name="" groupRelation="or">
+         <ClipboardChange onmatch="exclude">
+         </ClipboardChange>
+      </RuleGroup>
+  </EventFiltering>
+</Sysmon>
